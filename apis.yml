@@ -1,8 +1,27 @@
 aid: tier
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tier.png
 name: Tier
-description: 'Tier is a company surfaced as a portfolio company of northzone, point-nine, speedinvest
-  and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  Tier (now operating as Dott following the 2024 merger of TIER Mobility and
+  Dott) is a European micromobility operator providing shared e-scooters and
+  e-bikes across more than 400 cities in Europe and the Middle East. The company
+  exposes a partner-facing Dott Partner API — an API-Key-gated data feed
+  (including GBFS-style vehicle-availability data) governed by its published API
+  Licence — alongside consumer rider apps for iOS and Android. Founded in 2018
+  and headquartered in Amsterdam, Tier/Dott was backed by Northzone, Point Nine,
+  and Speedinvest.
 url: https://raw.githubusercontent.com/api-evangelist/tier/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,16 +33,60 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Consumer
-apis: []
+- Micromobility
+- Transportation
+- Mobility
+- Scooters
+- E-Bikes
+- GBFS
+- Europe
+apis:
+- name: Dott Partner API
+  description: >-
+    Partner-facing data API from Dott (formerly TIER), providing vehicle and
+    availability data (GBFS-style) to authorized partners. Access requires a
+    per-partner API Key issued through Dott's registration process and is
+    governed by the published API Licence; the data host rejects
+    unauthenticated requests with HTTP 401.
+  humanURL: https://ridedott.com/api-licence/
+  baseURL: https://gbfs.api.ridedott.com
+  tags:
+  - Micromobility
+  - GBFS
+  - Mobility
+  properties:
+  - type: Authentication
+    url: authentication/tier-authentication.yml
+  - type: TermsOfService
+    url: https://ridedott.com/api-licence/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/tier-domain-security.yml
 - type: Website
-  url: http://tier.app
+  url: https://ridedott.com
+- type: Blog
+  url: https://ridedott.com/blog/
+- type: Support
+  url: https://help.ridedott.com/
+- type: PrivacyPolicy
+  url: https://ridedott.com/privacy/
+- type: TermsOfService
+  url: https://ridedott.com/website-terms/
+- type: Authentication
+  url: authentication/tier-authentication.yml
+- type: LLMsTxt
+  url: llms/tier-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1

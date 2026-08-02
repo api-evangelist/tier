@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://ridedott.com/api-licence/
+docs: https://ridedott.com/api-licence/
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    The Dott Partner API is gated by a per-partner API Key issued through a
+    registration process communicated by Dott (see the published API Licence).
+    Keys are non-transferable ("You may not share the API Key with any third
+    party"). No public OpenAPI or OAuth surface is published; the GBFS data host
+    (gbfs.api.ridedott.com) rejects unauthenticated requests with HTTP 401
+    ("Unauthorized: missing authorization header").
+schemes:
+  - name: apiKey
+    type: apiKey
+    in: header
+    description: >-
+      Partner API Key obtained via Dott's registration process, sent as an
+      authorization header on requests to the Dott Partner API / GBFS host.
+    sources: [https://ridedott.com/api-licence/]

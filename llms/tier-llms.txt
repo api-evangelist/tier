@@ -1,0 +1,24 @@
+# Tier (Dott)
+
+> Tier — now operating as Dott after the 2024 merger of TIER Mobility and Dott — is a European micromobility operator running shared e-scooters and e-bikes across 400+ cities in Europe and the Middle East. It exposes a partner-facing, API-Key-gated Dott Partner API (GBFS-style vehicle/availability data) governed by a published API Licence. Backed by Northzone, Point Nine, and Speedinvest.
+
+## APIs
+
+- [Dott Partner API](https://ridedott.com/api-licence/): API-Key-gated partner data feed (GBFS-style vehicle availability). Requires a per-partner key issued via Dott's registration process; data host https://gbfs.api.ridedott.com returns HTTP 401 without authorization.
+
+## Docs
+
+- [API Licence](https://ridedott.com/api-licence/): Terms of use governing access to the Dott Partner API and API Key issuance.
+- [Help Center](https://help.ridedott.com/): Rider and partner support.
+- [Website Terms](https://ridedott.com/website-terms/): Site terms of use.
+- [Privacy Policy](https://ridedott.com/privacy/): Privacy policy.
+
+## Artifacts
+
+- [Authentication](https://raw.githubusercontent.com/api-evangelist/tier/refs/heads/main/authentication/tier-authentication.yml): API-Key authentication profile (searched from the API Licence).
+- [Domain Security](https://raw.githubusercontent.com/api-evangelist/tier/refs/heads/main/security/tier-domain-security.yml): Probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture.
+
+## Company
+
+- [Website](https://ridedott.com): Dott / TIER micromobility.
+- [Blog](https://ridedott.com/blog/): Company blog and press.
